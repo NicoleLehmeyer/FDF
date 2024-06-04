@@ -24,10 +24,7 @@
     - Vertical position: Ordinate
     - Value: Altitude
 
-• Execute fdf program with **42.fdf** map as follows:
-```
-./fdf 42.fdf
-```
+• Execute fdf program with **42.fdf** map as follows: ``` ./fdf 42.fdf ```
 Should render a landscape similar to:
 <p align="center">
   <img src="./imgs/rendered_image_example.png" alt="rendered" style="width:600px;"/>
@@ -46,10 +43,7 @@ Should render a landscape similar to:
 
 ## Run Program:
 
-Create executables:
-```
-make
-```
+Create executables: ``` make ```
 
 Run program with chosen map (located in ./maps): ``` ./fdf <*.fdf> ```
 
