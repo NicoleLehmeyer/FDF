@@ -51,12 +51,9 @@ Create executables:
 make
 ```
 
-Run server in one terminal:
-```
-./server
-```
+Run program with chosen map (located in ./maps): ``` ./fdf <*.fdf> ```
 
-Run client in another terminal:
+ie.
 ```
-./client <server_PID> <string__to_send>
+./fdf t2.fdf
 ```
