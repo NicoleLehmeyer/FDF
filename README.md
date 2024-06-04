@@ -47,7 +47,4 @@ Create executables: ``` make ```
 
 Run program with chosen map (located in ./maps): ``` ./fdf <*.fdf> ```
 
-ie.
-```
-./fdf t2.fdf
-```
+ie. ``` ./fdf t2.fdf ```
