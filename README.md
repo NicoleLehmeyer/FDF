@@ -30,7 +30,7 @@
 ```
 Should render a landscape similar to:
 <p align="center">
-  <img src="./imgs/rendered_image_example.png" alt="rendered" style="width:700px;"/>
+  <img src="./imgs/rendered_image_example.png" alt="rendered" style="width:600px;"/>
 </p>
 
 • Executable: 'fdf'
