@@ -15,7 +15,9 @@
 
 • Coordinates of landscape stored in **\*.fdf** file, passed as a parameter to the program, ie:
 
-![rendered](./imgs/cat_42_map.png "rendered")
+<p align="center">
+  <img src="./imgs/cat_42_map.png" alt="42_catted"/>
+</p>
 
 • Each number represents a point in space:
     - Horizontal position: Axis
@@ -27,7 +29,9 @@
 ./fdf 42.fdf
 ```
 Should render a landscape similar to:
-![rendered](./imgs/rendered_image_example.png "rendered")
+<p align="center">
+  <img src="./imgs/rendered_image_example.png" alt="rendered"/>
+</p>
 
 • Executable: 'fdf'
 
