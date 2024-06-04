@@ -45,6 +45,9 @@ Should render a landscape similar to:
 
 Create executables: ``` make ```
 
-Run program with chosen map (located in ./maps): ``` ./fdf <*.fdf> ```
+Run program with chosen map (located in ./maps): ``` ./fdf <maps/*.fdf> ```
 
-ie. ``` ./fdf t2.fdf ```
+ie. ``` ./fdf maps/t2.fdf ```
+<p align="center">
+  <img src="./imgs/t2_render_example.png" alt="rendered" style="width:600px;"/>
+</p>
