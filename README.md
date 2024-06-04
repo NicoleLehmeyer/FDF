@@ -51,3 +51,11 @@ ie. ``` ./fdf maps/t2.fdf ```
 <p align="center">
   <img src="./imgs/t2_render_example.png" alt="rendered" style="width:600px;"/>
 </p>
+---
+<p align="center">
+Made by NicoleLehmeyer: nlehmeye@student.42adel.org.au | LinkedIn: <a href="https://www.linkedin.com/in/nicole-lehmeyer/">nicole-lehmeyer</a> | Discord: <a href="https://discordapp.com/users/1107446949344448543/">nicole.lehmeyer</a>
+</p>
+
+<p align="center">
+  <img src="./images/coder_hampster.png" alt="hampster" style="width:100px;"/>
+</p>
