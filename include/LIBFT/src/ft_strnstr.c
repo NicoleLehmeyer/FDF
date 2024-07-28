@@ -12,14 +12,7 @@
 
 // Locate first occurence of the null-terminated 'needle' in 'haystack'
 // Where not more than len characters are searched.
-// DEBUG: What happens when you start strncmp but then hit the limit of len??
-//1. If statements or when needle is null or length of needle is 0, return null
-//2. If statement for when needle strlen is greater than len, return null
-//3. While loop, for while i < n
-//4. Use strncmp to find first occurrence, when 0 is returned
-//5. If i + strlen (needle) > n then return null
-//6. Otherwise, return char pointer &haystack[i]
-//7. i++ for the rest of the loop, then return null
+
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)

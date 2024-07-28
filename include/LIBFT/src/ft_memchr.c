@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlehmeye <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/18 09:42:58 by nlehmeye          #+#    #+#             */
-/*   Updated: 2023/07/18 09:42:59 by nlehmeye         ###   ########.fr       */
+/*   Created: 2023/07/14 19:04:10 by nlehmeye          #+#    #+#             */
+/*   Updated: 2023/07/14 19:04:12 by nlehmeye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//memcpy but NO OVERRIDING
-void	*ft_memmove(void *dst, const void *src, size_t len)
+//Search n bytes from *s for int c
+//Return first occurence of c
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (dst == NULL && src == NULL)
-		return (NULL);
-	if (src > dst)
-		dst = ft_memcpy(dst, src, len);
-	else
+	char	*p;
+	size_t	i;
+
+	i = 0;
+	p = (char *)s;
+	while (i < n)
 	{
-		while (len--)
-		{
-			((char *)dst)[len] = ((char *)src)[len];
-		}
+		if (p[i] == (char)c)
+			return (&p[i]);
+		i++;
 	}
-	return (dst);
+	return (0);
 }

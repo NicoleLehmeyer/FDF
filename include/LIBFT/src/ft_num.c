@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_d.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlehmeye <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/16 16:58:10 by nlehmeye          #+#    #+#             */
-/*   Updated: 2023/07/16 16:58:11 by nlehmeye         ###   ########.fr       */
+/*   Created: 2023/08/08 10:06:50 by nlehmeye          #+#    #+#             */
+/*   Updated: 2023/08/08 10:06:51 by nlehmeye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Compare null-terminated strings s1 and s2
-// Characters appearing after '\0' are not compared.*/
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_num(int d, int *len)
 {
-	size_t	i;
-
-	i = 0;
-	while (i <= ft_strlen(s1) && i <= ft_strlen(s2) && i < n)
+	if (d == -2147483648)
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
+		ft_s("-2147483648", len);
+		return ;
 	}
-	return (0);
+	if (d < 0)
+	{
+		write (1, "-", 1);
+		d = -d;
+		(*len)++;
+	}
+	if (d > 9)
+		ft_num(d / 10, len);
+	ft_c(d % 10 + '0', len);
 }

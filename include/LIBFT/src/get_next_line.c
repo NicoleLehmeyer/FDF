@@ -13,20 +13,14 @@
 #include "libft.h"
 
 /* F1: DO READ FUNCTION UNTIL '\n' OR '\0'
-	malloc store, space for buffer and null term
-	error handling for malloc
-	set readed_bytes to 1, (can't be 0, so it can enter the next while loop)
-	while there is no '\n' in the readedline string
+	'readed_bytes' set to 1, (can't be 0, to enter the next 'while' loop)
+	While there is no '\n' in the readedline string
 			(AND readed bytes is not 0, aka bytes are being read)
-		read fd to store, BUFFER_SIZE no. of bytes. Set read bytes to this value
-		if read == -1, free store and return NULL.
-	make last char in store '\0'    **NOTE: this could be less than BUFFER_SIZE
-	set value of readed line to strjoin readedline, store.
-		NEEDED TO CHANGE ft_strjoin TO ACCOM THIS
-	return the readedline
-
-	FIGURE OUT WHAT HAPPENS WHEN THE BUFFER IS BIGGER THAN THE LINE.
-	oh, it will stop because read bytes will stop at the number of bytes read??
+		-read fd to store, BUFFER_SIZE no. of bytes. Set read bytes to this value
+		-if read == -1, free store and return NULL.
+	make last char in store '\0'
+	**NOTE: this^ could be less than BUFFER_SIZE
+	RETURN: 'readedline'
 */
 char	*ft_readtilnl(int fd, char *readedline)
 {
@@ -52,18 +46,9 @@ char	*ft_readtilnl(int fd, char *readedline)
 	free(store);
 	return (readedline);
 }
-/* F2: CUT READED LINE AFTER '\n' OR end
-	if theres no linestart[i] then return NULL - 
-	but is this really necessary because this is done in the main function
-	while linestart[i] and linestart isn't '\n', count i up
-	malloc returnline for i + 2, for the '\n' and '\0'
-	error handling for malloc
-	set i to 0 again, then increment upwards (while loop),
-	set returnline[i] to the value of linestart[i], ++
-	**if loop, if the linestart[i++] == '\n',
-	then make returnline[i] the same value of linestart[i], then increment
-	put null terminator on the end of returnline
-*/
+
+//F2: CUT READED LINE AFTER '\n' OR end
+	//malloc returnline for i + 2 ('\n' and '\0')
 
 char	*ft_cutline(char *linestart)
 {
@@ -94,19 +79,17 @@ char	*ft_cutline(char *linestart)
 }
 
 /* F3: MOVE STATIC VAR TO CHAR AFTER RET LINE '\n'
-	count the number of chars in linestart, not including the '\n'
-	**if theres no linestart[i], then free it and return NULL.
-	** IS THIS NECESSARY?
-	malloc newlinestart for ((strlen of linestart) - i + 1).
+	Count the number of chars in linestart, not including the '\n'
+	If theres no linestart[i], then free it and return NULL.
+	Malloc newlinestart for ((strlen of linestart) - i + 1).
 		str ptr start of nl + \0
-	error handling for malloc
-	set other iterator to 0, then while linestart[i]
+	Set other iterator to 0, then while linestart[i]
 		(keep in mind it is the len of the prev returned line),
-		make newlinestart[j++] = linestart[i++]
-	make last char of newlinestart a null term
-	free linestart
-	return newlinestart
+		set newlinestart[j++] = linestart[i++]
+	FREE: linestart
+	RETURN: newlinestart
 */
+
 char	*ft_movepointer(char *linestart)
 {
 	char	*newlinestart;

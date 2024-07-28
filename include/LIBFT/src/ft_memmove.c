@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlehmeye <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/14 17:28:01 by nlehmeye          #+#    #+#             */
-/*   Updated: 2023/11/16 11:16:43 by nlehmeye         ###   ########.fr       */
+/*   Created: 2023/07/18 09:42:58 by nlehmeye          #+#    #+#             */
+/*   Updated: 2023/07/18 09:42:59 by nlehmeye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//memcpy but NO OVERRIDING
+
 #include "libft.h"
 
-//Locate first c (converted to char) in the string pointed to by *s.
-//Terminating null character is considered part of the string
-//If c is '\0', function will locate '\0'
-//Returns pointer to c or NULL if character does not occur in string
-char	*ft_strchr(const char *s, int c)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	i;
-
-	i = c;
-	if (!s)
+	if (dst == NULL && src == NULL)
 		return (NULL);
-	while (*s)
+	if (src > dst)
+		dst = ft_memcpy(dst, src, len);
+	else
 	{
-		if (*s == i)
-			return ((char *)s);
-		s++;
+		while (len--)
+		{
+			((char *)dst)[len] = ((char *)src)[len];
+		}
 	}
-	if (i == '\0')
-		return ((char *)s);
-	return (NULL);
+	return (dst);
 }

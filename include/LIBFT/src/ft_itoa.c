@@ -10,10 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//need a counter for how many times a function has been done
-//make this amount of space, malloc it
-//return char *. Use putchar??
-//
 #include "libft.h"
 
 static int	ft_numcount(int n)

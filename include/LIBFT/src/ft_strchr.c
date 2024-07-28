@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_d.c                                             :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlehmeye <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/08 10:06:50 by nlehmeye          #+#    #+#             */
-/*   Updated: 2023/08/08 10:06:51 by nlehmeye         ###   ########.fr       */
+/*   Created: 2023/07/14 17:28:01 by nlehmeye          #+#    #+#             */
+/*   Updated: 2023/11/16 11:16:43 by nlehmeye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//Locate first int c (converted to char) in the string *s.
+//Terminating null character is considered part of the string
+//If c is '\0', function will locate '\0'
+//Returns pointer to c or NULL if param error
+
 #include "libft.h"
 
-//Print decimal/
-void	ft_num(int d, int *len)
+char	*ft_strchr(const char *s, int c)
 {
-	if (d == -2147483648)
+	unsigned char	i;
+
+	i = c;
+	if (!s)
+		return (NULL);
+	while (*s)
 	{
-		ft_s("-2147483648", len);
-		return ;
+		if (*s == i)
+			return ((char *)s);
+		s++;
 	}
-	if (d < 0)
-	{
-		write (1, "-", 1);
-		d = -d;
-		(*len)++;
-	}
-	if (d > 9)
-		ft_num(d / 10, len);
-	ft_c(d % 10 + '0', len);
+	if (i == '\0')
+		return ((char *)s);
+	return (NULL);
 }

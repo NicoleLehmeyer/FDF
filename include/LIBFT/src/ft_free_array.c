@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_free_array.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nlehmeye <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nlehmeye <nlehmeye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/14 19:04:10 by nlehmeye          #+#    #+#             */
-/*   Updated: 2023/07/14 19:04:12 by nlehmeye         ###   ########.fr       */
+/*   Created: 2024/07/28 13:00:00 by nlehmeye          #+#    #+#             */
+/*   Updated: 2024/07/28 13:00:02 by nlehmeye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//search n bytes from *s for c
-//return first occurence of c
-//otherwise return NULL
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_free_array(char **array)
 {
-	char	*p;
-	size_t	i;
+	int	i;
 
 	i = 0;
-	p = (char *)s;
-	while (i < n)
+	while (array[i])
 	{
-		if (p[i] == (char)c)
-			return (&p[i]);
+		free(array[i]);
 		i++;
 	}
-	return (0);
+	free(array);
 }

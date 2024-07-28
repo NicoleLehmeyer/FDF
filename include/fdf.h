@@ -12,7 +12,7 @@
 
 #ifndef FDF_H
 # define FDF_H
-# include "LIBFT/libft.h"
+# include "LIBFT/include/libft.h"
 # include <stdlib.h>
 # include <string.h>
 # include <stdio.h>

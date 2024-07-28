@@ -10,17 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 //*s : string to be split
 //c  : delimiter character
 //RETURN : array of new strings resulting from the split.
-//NULL : if allocation fails
-//USE : malloc & free
 //Mallocates, return array of strings [2d] by splitting *s, c delimiter
-//Array must end with NULL pointer
 
-int	totalwordindest(char const *s, char c)
+#include "libft.h"
+
+static int	totalwordindest(char const *s, char c)
 {
 	int	totalword;
 

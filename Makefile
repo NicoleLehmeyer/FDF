@@ -2,40 +2,41 @@
 
 NAME = fdf
 
-FLAGS = -Wall -Wextra -Werror -g -fsanitize=address
+FLAGS = -Wall -Wextra -Werror -Iinclude
 
-LIBFT_ARCHIVE = LIBFT/libft.a
-MLX_ARCHIVE = minilibx_macos/libmlx.a
+LIBFT_ARCHIVE = include/LIBFT/libft.a
+MLX_ARCHIVE = include/minilibx_macos/libmlx.a
 
-SOURCES = main.c \
-	lines.c \
-	parse_input.c \
-	utils.c \
+SOURCES = src/main.c \
+	src/lines.c \
+	src/parse_input.c \
+	src/utils.c \
 
-OBJECTS = $(SOURCES:%.c=%.o)
+OBJECTS = $(SOURCES:src/%.c=obj/%.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS) $(LIBFT_ARCHIVE) $(MLX_ARCHIVE)
 	gcc $(FLAGS) $(LIBFT_ARCHIVE) $(OBJECTS) $(MLX_ARCHIVE) -framework OpenGL -framework AppKit -o $(NAME)
 
-%.o: %.c
+obj/%.o: src/%.c
+	mkdir -p obj
 	cc $(FLAGS) -Imlx -c $< -o $@
 
 $(LIBFT_ARCHIVE):
-	$(MAKE) -s -C LIBFT
+	$(MAKE) -s -C include/LIBFT
 
 $(MLX_ARCHIVE):
-	$(MAKE) -s -C minilibx_macos
+	$(MAKE) -s -C include/minilibx_macos
 
 clean:
-	rm -f $(OBJECTS)
-	$(MAKE) fclean -s -C LIBFT
-	$(MAKE) clean -s -C minilibx_macos
+	rm -rf obj
+	$(MAKE) fclean -s -C include/LIBFT
+	$(MAKE) clean -s -C include/minilibx_macos
 
 fclean: clean
 	rm -f $(NAME)
-	$(MAKE) fclean -s -C LIBFT
-	$(MAKE) clean -s -C minilibx_macos
+	$(MAKE) fclean -s -C include/LIBFT
+	$(MAKE) clean -s -C include/minilibx_macos
 
 re: fclean all

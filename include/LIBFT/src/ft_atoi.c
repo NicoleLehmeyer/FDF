@@ -10,13 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//Convert initial portion of string pointed to by str into int representation
-//1. spaces etc.
-//2. negative conversion
-//3. a to i
-//make a variable to store th result answer. what data type? int lol dum dum
-//atoi(123a4) returns "123"
-//are all those [i]'s necessary? Can they be replaced with *str? Yes
 #include "libft.h"
 
 int	ft_atoi(const char *str)
