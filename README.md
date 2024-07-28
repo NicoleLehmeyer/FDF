@@ -18,9 +18,9 @@
     <img src="./include/imgs/cat_42_map.png" alt="42_catted"/><br><br>
 </p>
 <p>
-  Each number represents a point in space:<br>
-    - Horizontal position: Axis<br>
-    - Vertical position: Ordinate<br>
+  Each number represents a point in space:<br><br>
+    - Horizontal position: Axis<br><br>
+    - Vertical position: Ordinate<br><br>
     - Value: Altitude<br><br>
   Execute fdf program with <b>42.fdf</b> map as follows: <code>./fdf 42.fdf</code><br>
   <br>
@@ -30,17 +30,13 @@
 <p align="center">
   <img src="./include/imgs/rendered_image_example.png" alt="rendered" style="width:600px;"/>
 </p>
-
-• Executable: 'fdf'
-
-• Allowed functions: Math library functions, MiniLibX, [libft](https://github.com/NicoleLehmeyer/LIBFT), open(), close(), read(), exit(), malloc(), free()
-
-• Written in C
-
-• Norminette compliant
-
-• No seg fault/bus error/double free etc.
-
+<p>
+  Executable: 'fdf'<br><br>
+  Allowed functions: Math library functions, MiniLibX, [libft](https://github.com/NicoleLehmeyer/LIBFT), open(), close(), read(), exit(), malloc(), free()<br><br>
+  Written in C<br><br>
+  Norminette compliant<br><br>
+  No seg fault/bus error/double free etc.<br><br>
+</p>
 
 ## Run Program:
 
@@ -50,7 +46,7 @@ Run program with chosen map (located in ./maps): ``` ./fdf <maps/*.fdf> ```
 
 ie. ``` ./fdf maps/t2.fdf ```
 <p align="center">
-  <img src="./include/imgs/t2_render_example.png" alt="rendered" style="width:600px;"/>
+  <img src="./include/imgs/t2_render_example.png" alt="rendered" style="width:600px;"/><br><br>
 </p>
 
 ---
