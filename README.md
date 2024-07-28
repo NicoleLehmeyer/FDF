@@ -18,9 +18,9 @@
     <img src="./include/imgs/cat_42_map.png" alt="42_catted"/><br><br>
 </p>
 <p>
-  Each number represents a point in space:<br><br>
-    - Horizontal position: Axis<br><br>
-    - Vertical position: Ordinate<br><br>
+  Each number represents a point in space:<br>
+    - Horizontal position: Axis<br>
+    - Vertical position: Ordinate<br>
     - Value: Altitude<br><br>
   Execute fdf program with <b>42.fdf</b> map as follows: <code>./fdf 42.fdf</code><br>
   <br>
