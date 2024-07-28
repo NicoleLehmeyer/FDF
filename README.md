@@ -4,7 +4,6 @@
 </p>
 <p>
   <br>
-  <br>
   <b><a href="https://github.com/NicoleLehmeyer/FDF/blob/main/subject/FDF_SUBJECT.pdf">FdF</a> ('fil de fer' in French, translating to 'wireframe model'), is a wireframe cartography software. It will represent a landscape as a 3D object where all surfaces are outlined in lines. FdF involves the use of 42's graphical library - 'MiniLibX', which includes the tools necessary to create and destroy windows and images, and deal with input device events (keyboard and mouse actions).</b><br><br>
   <b>FdF Grade: 100%</b>
   <br>
@@ -13,22 +12,18 @@
   <b>Requirements: </b><br><br>
   Create simple wireframe model representation of a 3D landscape by linking various points (x, y, z).<br><br>
   Represent model in <b>isometric projection</b><br><br>
-  Coordinates of landscape stored in **\*.fdf** file, passed as a parameter to the program, ie:<br><br>
-    <img align="center" src="./include/imgs/cat_42_map.png" alt="42_catted"/><br><br>
+  Coordinates of landscape stored in **\*.fdf** file, passed as a parameter to the program, ie:<br>
 </p>
-
-
-
-• Coordinates of landscape stored in **\*.fdf** file, passed as a parameter to the program, ie:
-
-
-
-• Each number represents a point in space:
+<p align="center">
+    <img src="./include/imgs/cat_42_map.png" alt="42_catted"/><br><br>
+</p>
+Each number represents a point in space:
     - Horizontal position: Axis
     - Vertical position: Ordinate
     - Value: Altitude
 
-• Execute fdf program with **42.fdf** map as follows: ``` ./fdf 42.fdf ```
+Execute fdf program with **42.fdf** map as follows: ``` ./fdf 42.fdf ```
+
 Should render a landscape similar to:
 <p align="center">
   <img src="./include/imgs/rendered_image_example.png" alt="rendered" style="width:600px;"/>
