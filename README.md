@@ -12,7 +12,7 @@
   <b>Requirements: </b><br><br>
   Create simple wireframe model representation of a 3D landscape by linking various points (x, y, z).<br><br>
   Represent model in <b>isometric projection</b><br><br>
-  Coordinates of landscape stored in <b>\*.fdf</b> file, passed as a parameter to the program, ie:<br>
+  Coordinates of landscape stored in <b>*.fdf</b> file, passed as a parameter to the program, ie:<br>
 </p>
 <p align="center">
     <img src="./include/imgs/cat_42_map.png" alt="42_catted"/><br><br>
