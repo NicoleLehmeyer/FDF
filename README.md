@@ -3,7 +3,7 @@
   <img src="./include/imgs/fdf_banner.png" alt="fdf"/>
   <br>
   <br>
-  <b><a href="https://github.com/NicoleLehmeyer/FDF/blob/main/subject/FDF_SUBJECT.pdf">FdF</a>('fil de fer' in French, translating to 'wireframe model'), is a wireframe cartography software. It will represent a landscape as a 3D object where all surfaces are outlined in lines. FdF involves the use of 42's graphical library - 'MiniLibX', which includes the tools necessary to create and destroy windows and images, and deal with input device events (keyboard and mouse actions).</b><br><br>
+  <b><a href="https://github.com/NicoleLehmeyer/FDF/blob/main/subject/FDF_SUBJECT.pdf">FdF</a> ('fil de fer' in French, translating to 'wireframe model'), is a wireframe cartography software. It will represent a landscape as a 3D object where all surfaces are outlined in lines. FdF involves the use of 42's graphical library - 'MiniLibX', which includes the tools necessary to create and destroy windows and images, and deal with input device events (keyboard and mouse actions).</b><br><br>
   <b>FdF Grade: 100%</b>
   <br>
   <br>
@@ -12,9 +12,7 @@
   Create simple wireframe model representation of a 3D landscape by linking various points (x, y, z).<br><br>
   Represent model in <b>isometric projection</b>isometric projection.<br><br>
   Coordinates of landscape stored in **\*.fdf** file, passed as a parameter to the program, ie:<br><br>
-  <p align="center">
-    <img src="./include/imgs/cat_42_map.png" alt="42_catted"/>
-  </p>
+    <img align="center" src="./include/imgs/cat_42_map.png" alt="42_catted"/><br><br>
 </p>
 
 
