@@ -12,19 +12,21 @@
   <b>Requirements: </b><br><br>
   Create simple wireframe model representation of a 3D landscape by linking various points (x, y, z).<br><br>
   Represent model in <b>isometric projection</b><br><br>
-  Coordinates of landscape stored in **\*.fdf** file, passed as a parameter to the program, ie:<br>
+  Coordinates of landscape stored in <b>\*.fdf</b> file, passed as a parameter to the program, ie:<br>
 </p>
 <p align="center">
     <img src="./include/imgs/cat_42_map.png" alt="42_catted"/><br><br>
 </p>
-Each number represents a point in space:
-    - Horizontal position: Axis
-    - Vertical position: Ordinate
-    - Value: Altitude
+<p>
+  Each number represents a point in space:<br>
+    - Horizontal position: Axis<br>
+    - Vertical position: Ordinate<br>
+    - Value: Altitude<br><br>
+  Execute fdf program with <b>42.fdf</b> map as follows: <code>./fdf 42.fdf</code><br>
+  <br>
+  Should render a landscape similar to:<br>
+</p>
 
-Execute fdf program with **42.fdf** map as follows: ``` ./fdf 42.fdf ```
-
-Should render a landscape similar to:
 <p align="center">
   <img src="./include/imgs/rendered_image_example.png" alt="rendered" style="width:600px;"/>
 </p>
