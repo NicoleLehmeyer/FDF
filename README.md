@@ -32,7 +32,7 @@
 </p>
 <p>
   Executable: 'fdf'<br><br>
-  Allowed functions: Math library functions, MiniLibX, [libft](https://github.com/NicoleLehmeyer/LIBFT), open(), close(), read(), exit(), malloc(), free()<br><br>
+  Allowed functions: Math library functions, MiniLibX, <a href="https://github.com/NicoleLehmeyer/LIBFT">libft</a>, open(), close(), read(), exit(), malloc(), free()<br><br>
   Program must be written in C and <a href="https://github.com/NicoleLehmeyer/LIBFT/blob/main/subject/norme.pdf">Norminette</a> (42 organisational syntax) compliant, without seg fault/bus error/double free etc.<br><br>
   No seg fault/bus error/double free etc.<br><br>
 </p>
