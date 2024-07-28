@@ -1,6 +1,6 @@
 # FDF
-<p>
-  <img src="./include/imgs/fdf_banner.png" alt="fdf" class="center">
+<p align="center">
+  <img src="./include/imgs/fdf_banner.png" alt="fdf">
 </p>
 <p>
   <br>
