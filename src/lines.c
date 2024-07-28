@@ -12,6 +12,7 @@
 
 #include "fdf.h"
 
+// Put pixel to image
 void	my_pp(t_fdf *fdf, int x, int y, int colour)
 {
 	char	*dst;
@@ -24,6 +25,7 @@ void	my_pp(t_fdf *fdf, int x, int y, int colour)
 	*(unsigned int *)dst = colour;
 }
 
+// SET P3 - Calculates direction of line, to get p3.x&y_steps
 void	set_p3(t_vector p1, t_vector p2, t_vector *p3)
 {
 	p3->x_steps = p2.x - p1.x;
@@ -43,6 +45,27 @@ void	iso_project(float *x, float *y, int z, t_fdf *fdf)
 			+ (*y * 0.25 * fdf->zoom)) - z;
 }
 
+//BRESENHAM:
+// Bresenham's line algorithm is used to draw lines on a raster
+	// grid (pixel grid), intaking two points, and determining
+	// the placement of each pixel between them
+// p3 is the line we are drawing. p1 and p2 are the points
+	// according to data in t_data *fdf struct
+// These two points are assigned to p3.z1&z2
+// We scale the coordinates of p1&p2 by the zoom. Otherwise,
+	// they will be a pixel apart
+	// and we would just see a small concentrated cluster of pixels
+// COLOUR - NON-ESSENTIAL AS PER SUBJECT GUIDELINES
+// We call the iso_project function which converts the 2D coordinates to a
+// 3D isometric projection, as per subject guidelines
+// This uses trigonometry - once I understood it, but no, I can't and won't now.
+	// Google it - there's a formula :)
+// We offset the image by 500 pixels so it's not just
+	// chilling in the top left corner
+// Set p3
+// While loop - calling my_pp (my pixel put) function to put
+	// each pixel down, incrementing
+	// the coordinates until we hit the end of the line
 void	bresenham(t_vector p1, t_vector p2, t_fdf *fdf)
 {
 	t_vector	p3;
@@ -71,6 +94,7 @@ void	bresenham(t_vector p1, t_vector p2, t_fdf *fdf)
 	}
 }
 
+// Draw lines between all points in array
 void	draw_line(t_fdf *fdf)
 {
 	t_vector	p1;
@@ -98,31 +122,3 @@ void	draw_line(t_fdf *fdf)
 		p1.y++;
 	}
 }
-// x_step = x2 - x1;
-// y_step = y2 - y1;
-// max = max(x_step, y_step);
-
-// x_step = x_step / max;
-// y_step = y_step / max;
-
-//BRESENHAM:
-// Bresenham's line algorithm is used to draw lines on a raster
-	// grid (pixel grid), intaking two points, and determining
-	// the placement of each pixel between them
-// p3 is the line we are drawing. p1 and p2 are the points
-	// according to data in t_data *fdf struct
-// These two points are assigned to p3.z1&z2
-// We scale the coordinates of p1&p2 by the zoom. Otherwise,
-	// they will be a pixel apart
-	// and we would just see a small concentrated cluster of pixels
-// COLOUR - NON-ESSENTIAL AS PER SUBJECT GUIDELINES
-// We call the iso_project function which converts the 2D coordinates to a
-// 3D isometric projection, as per subject guidelines
-// This uses trigonometry - once I understood it, but no, I can't and won't now.
-	// Google it - there's a formula :)
-// We offset the image by 300 pixels so it's not just
-	// chilling in the top left corner
-// SET P3 - Calculates direction of line, to get p3.x&y_steps
-// While loop - calling my_pp (my pixel put) function to put
-	// each pixel down, incrementing
-	// the coordinates until we hit the end of the line

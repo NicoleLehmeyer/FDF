@@ -12,6 +12,12 @@
 
 #include "fdf.h"
 
+// Parse input (map file)
+// mlx initialisation
+// Draw lines to image
+// Put image to window
+// Free data_img
+// mlx hooks for window close and esc key
 int	main(int argc, char **argv)
 {
 	t_fdf	fdf;

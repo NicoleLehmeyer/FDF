@@ -12,27 +12,9 @@
 
 #include "fdf.h"
 
-//read file.
-	//check file exists - fd must be 1 or more. Otherwise, error
-	//open file, for each point, input height, width, altitude (ft)
-	//convert char to ints, place them into a malloced 2D array
-
-//malloc for the 2D array of ints
-
-//ft to find height of image (array)
-
-//ft to find width of image (array)
-
-void	parse_assist(t_fdf *fdf, int y, int x, char **char_value)
-{
-	while (x < fdf->data_width)
-	{
-		fdf->data_img[y][x] = ft_atoi(char_value[x]);
-		free(char_value[x]);
-		x++;
-	}
-}
-
+// Read file, check if it exists, open file
+// Find size and malloc for 2D array of ints
+// Convert char to ints & assign to array
 void	parse_input(const char *file, t_fdf *fdf)
 {
 	int		fd;
@@ -120,4 +102,14 @@ int	find_width(const char *file)
 	close(fd);
 	free(gnl_return);
 	return (width);
+}
+
+void	parse_assist(t_fdf *fdf, int y, int x, char **char_value)
+{
+	while (x < fdf->data_width)
+	{
+		fdf->data_img[y][x] = ft_atoi(char_value[x]);
+		free(char_value[x]);
+		x++;
+	}
 }

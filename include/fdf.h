@@ -52,7 +52,7 @@ typedef struct s_fdf
 	int		data_width;			//Width of **data_img
 	int		data_height;		//Height of **data_img
 	int		zoom;				//Data for projection
-	int		colour;				//
+	int		colour;				
 	t_image	pointer_to_image;	//Pointer to t_image
 	void	*param;
 }				t_fdf;
@@ -63,7 +63,7 @@ typedef struct s_vector
 	float	y;
 	float	x_steps;
 	float	y_steps;
-	int		max;
+	int		max;				//Max of x_steps and y_steps (determines which direction for next pixel)
 	int		z1;
 	int		z2;
 }				t_vector;

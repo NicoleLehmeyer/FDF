@@ -12,6 +12,7 @@
 
 #include "fdf.h"
 
+// Count number of words in string
 int	totalwordindest_fdf(char const *s, char c)
 {
 	int	totalword;
@@ -31,6 +32,7 @@ int	totalwordindest_fdf(char const *s, char c)
 	return (totalword);
 }
 
+// Return max value of 2 integers
 int	find_max(int a, int b)
 {
 	if (a > b)
@@ -39,6 +41,7 @@ int	find_max(int a, int b)
 		return (b);
 }
 
+// Convert int to positive int
 int	pos_conv(int a)
 {
 	if (a < 0)
